@@ -8,9 +8,9 @@ def plot_2d_contour(ax, f, xlim, ylim, gridsize=100, zero=False): # f is an 2D f
     XY = np.vstack([X.ravel(), Y.ravel()]).T
     Zf = f(XY).reshape((gridsize, gridsize))
     if zero:
-        ax.contour(X, Y, Zf, 0, colors='red')
+        return ax.contour(X, Y, Zf, 0, colors='red')
     else:
-        ax.contour(X, Y, Zf)
+        return ax.contour(X, Y, Zf)
 
 # Example usage
 if __name__ == "__main__":
